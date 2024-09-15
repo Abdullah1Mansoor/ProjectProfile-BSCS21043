@@ -45,8 +45,42 @@
         </div>
   </section>
 
+<!--skills-->
+<section id="skills">
+    <h2>Skills</h2>
+    <button class="toggle-btn" onclick="toggleVisibility('skills-content')">Toggle Skills</button>
+    <div class="skills" id="skills-content">
+        <div class="skill-item">
+            <h3>Hard Skills</h3>
+            <ul>
+                <li>Web Development (HTML, CSS, React)</li>
+                <li>Backend Development (FastAPI, Django)</li>
+                <li>Database Management (SQLite, PostgreSQL)</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Teamwork</li>
+                <li>Problem-Solving</li>
+                <li>Time Management</li>
+                <li>Leadership</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 <script>
+   
+    function toggleVisibility(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
     const translations = {
     en: {
         "about-heading": "Welcome to My Professional Profile",
