@@ -198,7 +198,40 @@
             border: 5px solid #0044cc;
             border-radius: 10px;
         }
-        
+/* Media Queries */
+        @media (min-width: 768px) {
+    .navbar a {
+        display: inline-block;
+    }
+
+    .skills {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .skill-item {
+        width: 45%;
+    }
+
+    .video-content iframe {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar a {
+        font-size: 18px;
+    }
+
+    .skill-item {
+        width: 30%;
+    }
+
+    .video-content iframe {
+        height: 450px;
+    }
+}
+
     </style>
     </head>
 <body>
