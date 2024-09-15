@@ -6,7 +6,199 @@
     <title>Project Profile</title>
     <link rel="stylesheet" href="bscs21043.css">
     <style>
+  /* General Styles */
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #0044cc;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: #003399;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+/* Social Media Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links h3 {
+    margin-bottom: 10px;
+}
+
+.social-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links ul li {
+    margin-bottom: 10px;
+}
+
+.social-links ul li a {
+    color: #0044cc;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social-links ul li a:hover {
+    color: #003399;
+    text-decoration: underline;
+}
+        /* Multi-language Buttons */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch button {
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .lang-switch button:hover {
+            background-color: #003399;
+        }
+
+/* Language Switcher */
+.lang-switcher {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .lang-switcher button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .lang-switcher button:hover {
+            background-color: #003399;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .skill-item {
+            width: 40%;
+        }
+
+        .skill-item h3 {
+            color: #0044cc;
+        }
+
+        .skill-item ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skill-item ul li {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #0044cc;
+            border-radius: 5px;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+        }
+
+        #back-to-top:hover {
+            background-color: #003399;
+        }
+
+        /* Toggle Button Styles */
+        button.toggle-btn {
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button.toggle-btn:hover {
+            background-color: #003399;
+        }
+
+        /* Video Section */
+        .video-content {
+            text-align: center;
+        }
+
+        .video-content iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin-top: 20px;
+            border: 5px solid #0044cc;
+            border-radius: 10px;
+        }
+        
     </style>
     </head>
 <body>
@@ -109,10 +301,31 @@
         <iframe width="997" height="561" src="https://www.youtube.com/embed/vsWxs1tuwDk" title="Winning Speech (Music Video) Karan Aujla | Mxrci | Latest Punjabi Songs 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </section>
+<!-- Back to Top Button -->
+<button id="back-to-top">Back to Top</button>
 
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Muhammad Abdullah Mansoor. All rights reserved.</p>
+</footer>
 
 <script>
    
+      // It will show "Back to Top" button when scrolled down...
+      window.onscroll = function() {
+            const backToTop = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        };
+
+        // It will scroll back to top when button is clicked .............
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
     function toggleVisibility(sectionId) {
             const section = document.getElementById(sectionId);
             if (section.style.display === 'none' || section.style.display === '') {
@@ -148,4 +361,4 @@
 </script>
 
 </body>
-
+</html>
