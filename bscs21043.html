@@ -10,6 +10,7 @@
     </style>
     </head>
 <body>
+
     <!-- Navigation Bar -->
  <header>
     <nav class="navbar">
@@ -22,6 +23,53 @@
     </nav>
 </header>
 
+<!-- language switcher -->
+ <div class="lang-switcher">
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('ur')">Urdu </button>
+    <button onclick="changeLanguage('fr')">French</button>
+ </div>
 
+ <!-- About Section -->
+  <section id="about">
+    <h1 data-lang="about-heading">Welcome to My Professional Profile</h1>
+    <p data-lang="about-text">Hello! I'm Muhammad Abdullah Mansoor, a software engineer with a passion for creating web applications and solving complex problems.</p>
+        <!-- social links-->
+        <div class="social-links">
+            <h3>Connect with me on Social Media</h3>
+            <ul>
+                <li> <a href="www.github.com" target="_blank"> Github </a></li>
+                <li> <a href="www.github.com" target="_blank"> linkedin </a></li>
+                <li> <a href="www.github.com" target="_blank"> twitter </a></li>
+            </ul>
+        </div>
+  </section>
+
+
+<script>
+    const translations = {
+    en: {
+        "about-heading": "Welcome to My Professional Profile",
+        "about-text": "Hello! I'm Muhammad Abdullah Mansoor, a software engineer with a passion for creating web applications and solving complex problems.",
+        "social-heading": "Connect with me on Social Media"
+    },
+    ur: {
+        "about-heading": "میرے پروفیشنل پروفائل میں خوش آمدید",
+        "about-text": "ہیلو! میں محمد عبداللہ منصور ہوں، ایک سافٹ ویئر انجینئر ہوں جسے ویب ایپلی کیشنز بنانے اور پیچیدہ مسائل حل کرنے کا شوق ہے۔",
+        "social-heading": "سوشل میڈیا پر مجھ سے جڑیں"
+    },
+    fr: {
+        "about-heading": "Bienvenue sur mon profil professionnel",
+        "about-text": "Bonjour! Je suis Muhammad Abdullah Mansoor, un ingénieur logiciel passionné par la création d'applications web et la résolution de problèmes complexes.",
+        "social-heading": "Connectez-vous avec moi sur les réseaux sociaux"
+    }
+};
+    function changeLanguage(lang){
+        document.querySelectorAll("[data-lang]").forEach(element=>{
+            const key=element.getAttribute("data-lang");
+            element.textContent=translations[lang][key];
+        });
+    }
+</script>
 
 </body>
