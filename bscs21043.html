@@ -30,14 +30,15 @@
     <!-- About Section -->
     <section id="about">
         <h1 data-lang="about-heading">Welcome to My Professional Profile</h1>
+        <img src="images/abdullah.jpg" alt="Muhammad Abdullah Mansoor" class="profile-pic">
         <p data-lang="about-text">Hello! I'm Muhammad Abdullah Mansoor, a software engineer with a passion for creating web applications and solving complex problems.</p>
-        <!-- social links -->
+        <!-- Social Links -->
         <div class="social-links">
             <h3>Connect with me on Social Media</h3>
             <ul>
-                <li><a href="www.github.com" target="_blank">GitHub</a></li>
-                <li><a href="www.github.com" target="_blank">LinkedIn</a></li>
-                <li><a href="www.github.com" target="_blank">Twitter</a></li>
+                <li><a href="https://www.github.com" target="_blank">Github</a></li>
+                <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
             </ul>
         </div>
     </section>
@@ -71,31 +72,59 @@
     <section id="projects">
         <h2>Projects</h2>
         <button class="toggle-btn" onclick="toggleVisibility('projects-content')">Toggle Projects</button>
-        <ul id="projects-content">
-            <li>Feedback Relay <time datetime="2023-08-15">August 10, 2024</time></li>
-            <li>Web Scrapping Tool <time datetime="2024-02-10">May 10, 2024</time></li>
-        </ul>
+        <div class="projects-content" id="projects-content">
+            <div class="project-item">
+                <h3>Feedback Relay</h3>
+                <time datetime="2023-08-15">August 10, 2024</time>
+                <p>A platform to relay user feedback to developers efficiently.</p>
+            </div>
+            <div class="project-item">
+                <h3>Web Scraping Tool</h3>
+                <time datetime="2024-02-10">May 10, 2024</time>
+                <p>An automated tool for extracting data from websites.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Awards -->
     <section id="awards">
         <h2>Awards, Certifications & Hackathons</h2>
         <button class="toggle-btn" onclick="toggleVisibility('awards-content')">Toggle Awards</button>
-        <ul id="awards-content">
-            <li>3 times Gold Medalist Weight Lifting (2019)</li>
-            <li>Award for Best Discipline (2017)</li>
-            <li>Award for Good Behaviour (2015)</li>
-        </ul>
+        <div class="awards-content" id="awards-content">
+            <div class="award-item">
+                <h3>Gold Medalist Weight Lifting</h3>
+                <time datetime="2019">2019</time>
+                <p>Awarded three times for outstanding performance in weightlifting.</p>
+            </div>
+            <div class="award-item">
+                <h3>Best Discipline Award</h3>
+                <time datetime="2017">2017</time>
+                <p>Recognized for maintaining excellent discipline.</p>
+            </div>
+            <div class="award-item">
+                <h3>Good Behaviour Award</h3>
+                <time datetime="2015">2015</time>
+                <p>Awarded for consistent good behavior and attitude.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Degrees -->
     <section id="degrees">
         <h2>Degrees & Short Courses</h2>
         <button class="toggle-btn" onclick="toggleVisibility('degrees-content')">Toggle Degrees</button>
-        <ul id="degrees-content">
-            <li>BSc in Computer Science - 2020-2025</li>
-            <li>FSC 2019-2021</li>
-        </ul>
+        <div class="degrees-content" id="degrees-content">
+            <div class="degree-item">
+                <h3>BSc in Computer Science</h3>
+                <time datetime="2020-2025">2020-2025</time>
+                <p>Currently pursuing a Bachelor's degree in Computer Science.</p>
+            </div>
+            <div class="degree-item">
+                <h3>FSC (Pre-Engineering)</h3>
+                <time datetime="2019-2021">2019-2021</time>
+                <p>Completed FSC with a focus on engineering subjects.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Video Section -->

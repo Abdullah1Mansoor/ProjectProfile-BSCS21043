@@ -10,22 +10,27 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    padding: 0 15px;
 }
 
 /* Navigation Bar */
 .navbar {
     background-color: #0044cc;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 10px 15px;
     font-weight: bold;
     font-size: 18px;
+    margin: 5px;
 }
 
 .navbar a:hover {
@@ -37,15 +42,26 @@ body {
 section {
     margin: 40px auto;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1000px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* About Section Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #0044cc;
+}
+
 /* Social Media Links */
 .social-links {
     margin-top: 20px;
+    text-align: center;
 }
 
 .social-links h3 {
@@ -55,10 +71,12 @@ section {
 .social-links ul {
     list-style-type: none;
     padding: 0;
+    display: inline-block;
 }
 
 .social-links ul li {
-    margin-bottom: 10px;
+    display: inline;
+    margin: 0 10px;
 }
 
 .social-links ul li a {
@@ -96,13 +114,13 @@ section {
 /* Skills Section */
 .skills {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: left;
     margin: 20px 0;
 }
 
 .skill-item {
-    width: 40%;
+    width: 45%;
 }
 
 .skill-item h3 {
@@ -179,12 +197,36 @@ button.toggle-btn:hover {
     }
 
     .skill-item {
-        width: 80%;
+        width: 100%;
         margin-bottom: 20px;
     }
 
+    /* Adjust the profile pic size for smaller screens */
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Navbar adjustments for smaller screens */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
     .navbar a {
-        font-size: 16px;
-        padding: 10px 15px;
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 12px; /* Reduce padding */
+        margin: 3px; /* Reduce margin between links */
+    }
+
+    .social-links ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Video content for smaller screens */
+    .video-content iframe {
+        height: 300px;
     }
 }
