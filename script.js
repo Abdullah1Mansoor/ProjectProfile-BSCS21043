@@ -1,4 +1,4 @@
-// Toggle visibility function for each section
+
 function toggleVisibility(id) {
     const element = document.getElementById(id);
     if (element.style.display === "none") {
@@ -8,7 +8,7 @@ function toggleVisibility(id) {
     }
 }
 
-// Multi-language support function
+
 const translations = {
     en: {
         'about-heading': 'Welcome to My Professional Profile',
@@ -32,7 +32,7 @@ function changeLanguage(lang) {
     });
 }
 
-// Back to Top button functionality
+
 const backToTopButton = document.getElementById("back-to-top");
 window.onscroll = function() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
