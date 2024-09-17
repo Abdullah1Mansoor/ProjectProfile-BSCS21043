@@ -140,6 +140,14 @@ section {
     border-radius: 5px;
 }
 
+/* GitHub Feed Section */
+.github-feed img {
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width on larger screens */
+    display: block;
+    margin: 10px auto;
+}
+
 /* Back to Top Button */
 #back-to-top {
     position: fixed;
@@ -228,5 +236,11 @@ button.toggle-btn:hover {
     /* Video content for smaller screens */
     .video-content iframe {
         height: 300px;
+    }
+
+    /* GitHub Feed section adjustments for mobile */
+    .github-feed img {
+        max-width: 100%; /* Make sure GitHub stats images are responsive */
+        margin: 10px 0;
     }
 }
