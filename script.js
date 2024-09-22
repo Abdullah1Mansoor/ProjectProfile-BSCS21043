@@ -68,7 +68,13 @@ const profileData = {
     ],
     video: "https://www.youtube.com/embed/vsWxs1tuwDk"
 };
+function populateProfile(lang){
+    document.querySelector('[data-lang="about-heading"]').innerText = profileData.about.heading[lang];
+    document.querySelector('[data-lang="about-text"]').innerText = profileData.about.text[lang];
+    document.querySelector('.profile-pic').src = profileData.about.image;
 
+
+}
 function toggleVisibility(id) {
     const element = document.getElementById(id);
     if (element.style.display === "none") {
