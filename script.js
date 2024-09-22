@@ -73,7 +73,31 @@ function populateProfile(lang){
     document.querySelector('[data-lang="about-text"]').innerText = profileData.about.text[lang];
     document.querySelector('.profile-pic').src = profileData.about.image;
 
+    const skillsContent=document.getElementById('skills-content');
+    skillsContent.innerHTML=`
+        <div class="skill-item">
+            <h3>Hard Skills</h3>
+            <ul>
+                ${profileData.skills.hardSkills.map(skill => `<li>${skill}</li>`).join('')}
+            </ul>
+        </div>
+        <div class="skill-item">
+            <h3>Soft Skills</h3>
+            <ul>
+                ${profileData.skills.softSkills.map(skill => `<li>${skill}</li>`).join('')}
+            </ul>
+        </div>
+    `;
 
+    // Projects
+    const projectsContent = document.getElementById('projects-content');
+    projectsContent.innerHTML = profileData.projects.map(project => `
+        <div class="project-item">
+            <h3>${project.title}</h3>
+            <time datetime="${project.date}">${project.date}</time>
+            <p>${project.description}</p>
+        </div>
+    `).join('');
 }
 function toggleVisibility(id) {
     const element = document.getElementById(id);
