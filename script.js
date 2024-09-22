@@ -125,6 +125,14 @@ function populateProfile(lang){
         <iframe width="997" height="561" src="${profileData.video}" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     `;
 }
+
+// Language Change Function
+function changeLanguage(lang) {
+    populateProfile(lang);
+}
+
+populateProfile('en');
+
 function toggleVisibility(id) {
     const element = document.getElementById(id);
     if (element.style.display === "none") {
