@@ -109,7 +109,7 @@ function populateProfile(lang){
          </div>
      `).join('');
 
-       // Degrees
+    // Degrees
     const degreesContent = document.getElementById('degrees-content');
     degreesContent.innerHTML = profileData.degrees.map(degree => `
         <div class="degree-item">
@@ -118,6 +118,12 @@ function populateProfile(lang){
             <p>${degree.description}</p>
         </div>
     `).join('');
+
+    // Video
+    const videoContent = document.getElementById('video-content');
+    videoContent.innerHTML = `
+        <iframe width="997" height="561" src="${profileData.video}" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    `;
 }
 function toggleVisibility(id) {
     const element = document.getElementById(id);
