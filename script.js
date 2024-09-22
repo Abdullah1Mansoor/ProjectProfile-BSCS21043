@@ -100,14 +100,24 @@ function populateProfile(lang){
     `).join('');
 
      // Awards
-     const awardsContent = document.getElementById('awards-content');
-     awardsContent.innerHTML = profileData.awards.map(award => `
+    const awardsContent = document.getElementById('awards-content');
+    awardsContent.innerHTML = profileData.awards.map(award => `
          <div class="award-item">
              <h3>${award.title}</h3>
              <time datetime="${award.date}">${award.date}</time>
              <p>${award.description}</p>
          </div>
      `).join('');
+
+       // Degrees
+    const degreesContent = document.getElementById('degrees-content');
+    degreesContent.innerHTML = profileData.degrees.map(degree => `
+        <div class="degree-item">
+            <h3>${degree.title}</h3>
+            <time datetime="${degree.duration}">${degree.duration}</time>
+            <p>${degree.description}</p>
+        </div>
+    `).join('');
 }
 function toggleVisibility(id) {
     const element = document.getElementById(id);
