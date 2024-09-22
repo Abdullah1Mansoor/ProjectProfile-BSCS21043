@@ -98,6 +98,16 @@ function populateProfile(lang){
             <p>${project.description}</p>
         </div>
     `).join('');
+
+     // Awards
+     const awardsContent = document.getElementById('awards-content');
+     awardsContent.innerHTML = profileData.awards.map(award => `
+         <div class="award-item">
+             <h3>${award.title}</h3>
+             <time datetime="${award.date}">${award.date}</time>
+             <p>${award.description}</p>
+         </div>
+     `).join('');
 }
 function toggleVisibility(id) {
     const element = document.getElementById(id);
